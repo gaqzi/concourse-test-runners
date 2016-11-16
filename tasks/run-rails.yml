@@ -12,4 +12,5 @@ inputs:
   - name: test-runners
 
 run:
-  path: test-runners/bin/rails-runner simple-test
+  path: test-runners/bin/rails-runner
+  args: simple-test
