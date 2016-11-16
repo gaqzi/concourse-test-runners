@@ -13,4 +13,5 @@ inputs:
 
 run:
   path: test-runners/bin/rails-runner
-  args: simple-test
+  args:
+    - simple-test
