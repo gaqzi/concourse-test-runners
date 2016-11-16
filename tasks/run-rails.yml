@@ -1,0 +1,15 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: circleci/build-image
+    tag: 'ubuntu-14.04-XXL-805-e76c14f'
+
+inputs:
+  - name: simple-test
+  - name: test-runners
+
+run:
+  path: test-runners/bin/rails-runner simple-test
