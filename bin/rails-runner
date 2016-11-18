@@ -1,6 +1,6 @@
 #!/bin/sh
 
-APP_PATH=$(dirname $0)
+APP_PATH=$(dirname $1)
 APP_NAME=$(basename $APP_PATH)
 
 set -x
