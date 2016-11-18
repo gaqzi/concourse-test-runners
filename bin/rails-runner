@@ -6,4 +6,5 @@ APP_NAME=$(basename $APP_PATH)
 set -x
 
 cd $APP_PATH && \
+   bundle install && \
    bin/rspec
