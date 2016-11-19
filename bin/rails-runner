@@ -1,9 +1,11 @@
-#!/bin/sh
+#!/bin/bash -l
 
 APP_PATH=$1
 APP_NAME=$(basename $APP_PATH)
 
 set -x
+
+rvm use 2.3.0
 
 cd $APP_PATH && \
    bundle install && \
