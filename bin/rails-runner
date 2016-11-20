@@ -5,6 +5,9 @@ APP_NAME=$(basename $APP_PATH)
 
 set -x
 
+source ~ubuntu/.bash_profile
+source ~ubuntu/.bashrc
+
 rvm use 2.3.0
 
 cd $APP_PATH && \
