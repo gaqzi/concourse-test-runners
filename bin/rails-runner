@@ -3,12 +3,12 @@
 APP_PATH=$1
 APP_NAME=$(basename $APP_PATH)
 
-set -x
-
 source ~ubuntu/.bash_profile
 source ~ubuntu/.bashrc
 
 rvm use 2.3.0
+
+set -x
 
 cd $APP_PATH && \
    bundle install && \
