@@ -12,4 +12,4 @@ set -x
 
 cd $APP_PATH && \
    bundle install && \
-   bin/rspec
+   xvfb-run bin/rspec
