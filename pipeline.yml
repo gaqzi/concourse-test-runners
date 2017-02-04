@@ -1,0 +1,22 @@
+---
+resources:
+  - name: simple-test
+    type: git
+    source:
+      uri: https://github.com/gaqzi/ci-simple-test.git
+      branch: master
+  - name: test-runners
+    type: git
+    source:
+      uri: https://github.com/gaqzi/concourse-test-runners.git
+      branch: master
+
+jobs:
+  - name: unit
+    plan:
+      - get: simple-test
+        trigger: true
+      - get: test-runners
+        trigger: true
+      - task: tests
+        file: test-runners/tasks/run-rails.yml
